@@ -1,0 +1,68 @@
+[
+  {
+    "message": "4",
+    "productCode": "2168436035040",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "4.5",
+    "productCode": "2168436035045",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "5",
+    "productCode": "2168436035050",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "5.5",
+    "productCode": "2168436035055",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "6",
+    "productCode": "2168436035060",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "6.5",
+    "productCode": "2168436035065",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "7",
+    "productCode": "2168436035070",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "8",
+    "productCode": "2168436035080",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "9",
+    "productCode": "2168436035090",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "10",
+    "productCode": "2168436035100",
+    "inStock": true,
+    "inStockExpress": true
+  },
+  {
+    "message": "11 (Out of Stock)",
+    "productCode": "2168436035110",
+    "inStock": false,
+    "inStockExpress": false
+  }
+]

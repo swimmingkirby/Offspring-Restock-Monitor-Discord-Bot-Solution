@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+</head>
+<body>
+    <h1>OFFSPRING</h1>
+    <form id="fetchForm">
+        <label for="productCode">Product code:</label><br>
+        <input type="text" id="productCode" name="productCode"><br><br>
+        <label for="size">Size:</label><br>
+        <input type="text" id="size" name="size"><br><br>
+        <button type="submit">Fetch Data</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('fetchForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const productCode = document.getElementById('productCode').value;
+            const size = document.getElementById('size').value;
+            const url =  `https://www.offspring.co.uk/view/instorestock/getStockForProductSizes?productCode=${productCode}&catalogId=offspring_catalog`;
+            const response = await fetch(`http://localhost:3000/fetchData?url=${encodeURIComponent(url)}`);
+            const data = await response.json();
+
+            // Filter and display the result
+            displayFilteredResult(data, size);
+        }); 
+
+        function displayFilteredResult(data, size) {
+            // Filter the result to include only "message" and "inStock" fields
+            let filteredData = data.map(item => ({ message: item.message, inStock: item.inStock }));
+
+            // Filter based on size if provided
+            if (size) {
+                filteredData = filteredData.filter(item => item.message.includes(size));
+            }
+
+            // Displaying the filtered result
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<pre>${JSON.stringify(filteredData, null, 2)}</pre>`;
+        }
+    </script>
+</body>
+</html>
