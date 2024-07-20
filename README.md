@@ -45,7 +45,27 @@ The Offspring Session Web Scraper uses Puppeteer to automate the process of sign
 ## Technologies used:
 Node.js | Express.js | discord.js | Puppeteer | Axios |Google API (Gmail API)
 
-## Disclamer
+# Project Disclaimer
+
+## Disclaimer
+
 This project is for educational purposes only. It does not provide accurate stock size information from offspring.com and is not intended for commercial use or distribution. Use of this project is at your own risk.
+
+**Additional Disclaimer:**
+
+This project is incomplete, and all references to real-world APIs have been left out.
+
+## Things that need to be improved:
+
+1. **Email Parsing and Formatting:**
+   - The email returned needs to be parsed and formatted accordingly.
+
+2. **Stock Checking:**
+   - The returning of the stock for a product must call the correct API or use an alternative web scraping method.
+
+Hopefully, this project will act as a proof of concept or a guide for the development of a restock monitor bot for Offspring.
+
+For any questions, feel free to get in contact with me.
+
 
 
